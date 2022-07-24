@@ -5,6 +5,7 @@ import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.Post
 import testeapi.br.com.model.Todo
+import todo.br.com.repository.TodoRepository
 
 
 @Controller("/todos")

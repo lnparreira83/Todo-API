@@ -1,4 +1,4 @@
-package todo.br.com
+package todo.br.com.repository
 
 import io.micronaut.data.annotation.Repository
 import io.micronaut.data.jpa.repository.JpaRepository

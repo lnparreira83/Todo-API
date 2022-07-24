@@ -1,9 +1,11 @@
 package todo.br.com
 
+import io.micronaut.http.HttpResponse
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.Post
 import testeapi.br.com.model.Todo
+
 
 @Controller("/todos")
 class TodoController(private val todoRepository: TodoRepository) {
@@ -14,7 +16,7 @@ class TodoController(private val todoRepository: TodoRepository) {
     }
 
     @Post
-    fun addTodo(todo: Todo): Todo {
-        return todoRepository.save(todo)
+    fun addTodo(todo: Todo): HttpResponse<Todo> {
+        return HttpResponse.created(todoRepository.save(todo))
     }
 }
